@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+*, *:after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background:#fafafa;
+	line-height:1.5;
+}
+footer {
+    border-top: 1px solid #aeaeae;
+}
+header {
+    padding: 0;
+}
+.ul-navbar {
+    display: grid;
+    grid-gap: 0px;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin: 0 auto;
+    list-style: none;
+    border-bottom: 1px solid #222222;
+    li {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        a {
+            display: inline-block;
+            text-align: center;
+            padding: 1em;
+            color: indigo;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            &:hover, :focus {
+                background-color: indigo;
+                color: yellow;
+                cursor: pointer;
+            }
+            &.active {
+                background-color: indigo;
+                color: yellow;
+            }
+        }
+    }
+}
+h1 {
+    display: block;
+    clear: both;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+p {
+    padding: 0 0 0 1em;
+}
+h2 {
+    width: 100%;
+    display: block;
+    clear: both;
+    margin: 0 auto 1em auto;
+    text-align: center;
+    font-size: 2em;
+}
+.img-art {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
+section {
+	box-shadow:0 2px 5px rgba(0,0,0,0.2);
+	background:#fff;
+    width:60%;
+	margin:50px auto;
+	padding:50px;
+}
+blockquote {
+	text-align:center;
+	font-size:1.5em;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	position:relative;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-family: 'Itim', cursive;
+}
+blockquote:after {
+	color:#ccc;
+	font-family: cursive;
+	content: open-quote;
+	font-size: 65px;
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% - 20px);
+	background:#fff;
+	height: 55px;
+	width: 55px;
+	line-height: normal;
+	text-align: center;
+	transform: translateX(-50%);
+}
+blockquote p {
+	padding:20px;
+}
