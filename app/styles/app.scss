@@ -2,108 +2,140 @@
     padding: 0;
     margin: 0;
 }
-*, *:after {
+
+*,
+*:after {
     box-sizing: border-box;
 }
+
 body {
+    background: #fafafa;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    background:#fafafa;
-	line-height:1.5;
-}
-footer {
-    border-top: 1px solid #aeaeae;
-}
-header {
-    padding: 0;
-}
-.ul-navbar {
-    display: grid;
-    grid-gap: 0px;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    margin: 0 auto;
-    list-style: none;
-    border-bottom: 1px solid #222222;
-    li {
-        margin: 0 auto;
+    line-height: 1.5;
+    header {
         padding: 0;
-        width: 100%;
-        a {
-            display: inline-block;
-            text-align: center;
-            padding: 1em;
-            color: indigo;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            width: 100%;
-            &:hover, :focus {
-                background-color: indigo;
-                color: yellow;
-                cursor: pointer;
+    }
+    main {
+        min-height: 80vh;
+    }
+    footer {
+        border-top: 1px solid #aeaeae;
+    }
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    @media screen and (min-width: 992px) {
+        justify-content: flex-end;
+        flex-flow: row nowrap;
+    }
+    a {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        min-width: 100%;
+        padding: 1em;
+        text-decoration: none;
+        text-transform: uppercase;
+        &.brand {
+            @media screen and (min-width: 768px){
+                left: 0;
+                position: absolute;
             }
-            &.active {
-                background-color: indigo;
-                color: yellow;
-            }
+        }
+        &:hover,
+        :focus {
+            cursor: pointer;
+        }
+        @media screen and (min-width:768px) {
+            min-width: 100px;
         }
     }
 }
+
 h1 {
     display: block;
     clear: both;
     margin: 0 auto;
     padding: 0.5em;
 }
+
 p {
     padding: 0 0 0 1em;
 }
+
 h2 {
-    width: 100%;
-    display: block;
     clear: both;
+    display: block;
+    font-size: 2em;
     margin: 0 auto 1em auto;
     text-align: center;
-    font-size: 2em;
+    width: 100%;
 }
+
 .img-art {
-    width: 600px;
-    max-width: 100%;
-    height: auto;
     display: block;
+    height: auto;
     margin: 1em auto;
+    max-width: 100%;
+    width: 600px;
 }
+
 section {
-	box-shadow:0 2px 5px rgba(0,0,0,0.2);
-	background:#fff;
-    width:60%;
-	margin:50px auto;
-	padding:50px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    padding: 50px;
+    width: 60%;
 }
+
 blockquote {
-	text-align:center;
-	font-size:1.5em;
-	border-top:1px solid #ccc;
-	border-bottom:1px solid #ccc;
-	position:relative;
-    quotes: "\201C""\201D""\2018""\2019";
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
     font-family: 'Itim', cursive;
+    font-size: 1.5em;
+    position: relative;
+    quotes: "\201C""\201D""\2018""\2019";
+    text-align: center;
+    &:after {
+        background: #fff;
+        bottom: calc(100% - 20px);
+        color: #ccc;
+        content: open-quote;
+        font-family: cursive;
+        font-size: 65px;
+        height: 55px;
+        left: 50%;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        transform: translateX(-50%);
+        width: 55px;
+    }
+    p {
+        padding: 20px;
+    }
 }
-blockquote:after {
-	color:#ccc;
-	font-family: cursive;
-	content: open-quote;
-	font-size: 65px;
-	position: absolute;
-	left: 50%;
-	bottom: calc(100% - 20px);
-	background:#fff;
-	height: 55px;
-	width: 55px;
-	line-height: normal;
-	text-align: center;
-	transform: translateX(-50%);
-}
-blockquote p {
-	padding:20px;
+.list-cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    li {
+        margin: auto;
+        padding: 0.804em;
+        img {
+            display: block;
+            max-width: 100%;
+            width: 300px;
+            height: auto;
+        }
+    }
 }

@@ -12,7 +12,7 @@ Router.map(function() {
   this.route('green');
   this.route('indigo');
   this.route('orange');
-  this.route('red', { path: '/' });
+  this.route('red');
   this.route('violet');
   this.route('yellow');
 });
